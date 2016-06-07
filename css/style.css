@@ -1,3 +1,107 @@
+/*Правила для карусели*/
+/*
+ *  Core Owl Carousel CSS File
+ *  v1.3.3
+ */
+
+/* clearfix */
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+/* display none until init */
+.owl-carousel{
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+  -webkit-transition: height 500ms ease-in-out;
+  -moz-transition: height 500ms ease-in-out;
+  -ms-transition: height 500ms ease-in-out;
+  -o-transition: height 500ms ease-in-out;
+  transition: height 500ms ease-in-out;
+}
+
+.owl-carousel .owl-item{
+  float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+  cursor: pointer;
+}
+.owl-controls {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing {
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+
+.owl-prev{
+  position: absolute;
+  top: 15%;
+  left: -90px;
+  background-image: url(../img/icon-slider-left.png);
+  width: 74px;
+  height: 116px;
+}
+
+.owl-next{
+  position: absolute;
+  top: 15%;
+  right: -90px;
+  background-image: url(../img/icon-slider-right.png);
+  width: 74px;
+  height: 116px;
+}
+
+.carousel-skin{
+  width: 80%;
+  height: 200px;
+  margin: 0 auto;
+  background-image: url(../img/bg-slider.png);
+  padding-top: 20px;
+  border-radius: 11px;
+}
+
+.owl-item img{
+    width: 80%;
+}
+
 @font-face {
     font-family: HelveticaNeueMedium; /* Имя шрифта */
     src: url(../fonts/HelveticaNeue-Medium.otf); /* Путь к файлу со шрифтом */
@@ -699,6 +803,7 @@ header > div.container{
     text-align: center;
     position: relative;
     display: inline-block;
+    margin-bottom: 80px;
 }
 
 .advantages__title:after, .advantages__title:before{
@@ -711,12 +816,261 @@ header > div.container{
     top: 14px;
 }
 
+.advantages__example{
+    position: relative;
+}
+
+.advantages__example:after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    margin: auto;
+    background-image: url(../img/icon-advantages-wave.png);
+    width: 311px;
+    height: 8px;
+}
+
+.advantages > div > div:nth-of-type(1) > div:first-child .advantages__example:after{
+    left: 70px;
+}
+
+.advantages > div > div:nth-of-type(1) > div:last-child .advantages__example:after{
+    left: 170px;
+}
+
+.advantages > div > div:nth-of-type(2) > div:first-child .advantages__example:after{
+    left: 70px;
+}
+
+.advantages > div > div:nth-of-type(2) > div:last-child .advantages__example:after{
+    left: 170px;
+}
+
 .advantages__title:after{
     left: -20px;
 }
 
 .advantages__title:before{
     right: -20px;
+}
+
+.advantages__example-title{
+    position: relative;
+    font-family: HelveticaNeueMedium;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.advantages__example-title:before{
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.advantages__example-title:before{
+    background-image: url(../img/icon-advantages-wave.png);
+    width: 311px;
+    height: 8px;
+    bottom: -90px;
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: auto;
+}
+
+.advantages__example-title:after{
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.advantages > div > div{
+    margin-bottom: 60px;
+}
+
+.advantages > div > div > div:first-child .advantages__example-title:after{
+    background-image: url(../img/icon-advantages-quality.png);
+    width: 38px;
+    height: 50px;
+    top: -10px;
+    left: 70px;
+}
+
+.advantages > div > div > div:nth-child(2) .advantages__example-title:after{
+    background-image: url(../img/icon-advantages-man.png);
+    width: 60px;
+    height: 60px;
+    top: -10px;
+    left: 130px;
+}
+
+.advantages > div > div:nth-of-type(2) > div:first-child .advantages__example-title:after{
+    background-image: url(../img/icon-advantages-coins.png);
+    width: 39px;
+    height: 39px;
+    top:  -5px;
+    left: 90px;
+}
+
+.advantages > div > div:nth-of-type(2) > div:last-child .advantages__example-title:after{
+    background-image: url(../img/icon-advantages-pens.png);
+    width: 45px;
+    height: 45px;
+    top:  -5px;
+    left: 170px;
+}
+
+.advantages__example-title + p{
+    font-family: HelveticaNeueMedium;
+    color: #000;
+    text-align: justify;
+}
+
+.portfolio-carousel{
+    background-image: url(../img/bg-portfolio-carousel.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.portfolio-carousel__title{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-family: HelveticaNeueLight;
+    font-size: 24px;
+    color: #fff;
+}
+
+.portfolio-carousel__title:after, .portfolio-carousel__title:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-white-marker.png);
+    position: absolute;
+    top: 14px;
+}
+
+.portfolio-carousel__title:after {
+    left: -20px;
+}
+
+.portfolio-carousel__title:before {
+    right: -20px;
+}
+
+.steps-of-work{
+    padding-top: 16px;
+    padding-bottom: 50px;
+}
+
+.steps-of-work__form{
+    padding: 0 45px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: #454444;
+    border: 2px solid  #c8a150;
+    -webkit-border-radius: 120px 120px 120px 120px;
+    border-radius: 120px 120px 120px 120px;
+    position: relative;
+    -webkit-box-shadow: 0 3px 6px 3px #7d7d7d;
+    box-shadow: 0 3px 6px 3px #7d7d7d;
+}
+
+.steps-of-work__form:after, .steps-of-work__form:before{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/icon-main-page-screw.png);
+    position: absolute;
+    top: 36px;
+}
+
+.steps-of-work__form:after{
+    left: 15px;
+}
+
+.steps-of-work__form:before{
+    right: 15px;
+}
+
+.steps-of-work__form p{
+    font-family: HelveticaNeueLight;
+    font-size: 15px;
+    color: #fff;
+    padding: 35px 0;
+}
+
+.steps-of-work__form input[type=text]{
+    display: inline-block;
+    width: 49%;
+    margin: 27px 0;
+    padding: 8px 10px;
+    border: 2px solid  #c8a150;
+}
+
+.steps-of-work__form input[type=text]:first-child{
+    -webkit-border-radius: 120px 0 0 120px;
+    border-radius: 120px 0 0 120px;
+}
+
+.steps-of-work__form input[type=text]:last-child{
+    -webkit-border-radius: 0 120px 120px 0;
+    border-radius: 0 120px 120px 0;
+}
+
+.steps-of-work__form input[type=submit]{
+    background-color: #cfad69;
+    color: #fff;
+    font-family: HelveticaNeueBold;
+    font-size: 18px;
+    -webkit-border-radius: 120px 120px 120px 120px;
+    border-radius: 120px 120px 120px 120px;
+    margin: 27px 0;
+    padding: 7px 0;
+    width: 100%;
+    border: none;
+}
+
+.steps-of-work__form input[type=submit]:hover{
+    -webkit-box-shadow:inset 0 0 6px 4px #726347;
+    box-shadow:inset 0 0 6px 4px #726347;
+}
+
+.steps-of-work__six-steps{
+    text-align: center;
+    padding: 50px 100px;
+}
+
+.steps-of-work__six-steps-title{
+    font-family: HelveticaNeueLight;
+    font-size: 24px;
+    color: 000px;
+    position: relative;
+    display: inline-block;
+}
+
+.steps-of-work__six-steps > p:after, .steps-of-work__six-steps > p:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-black-marker.png);
+    position: absolute;
+    top: 14px;
+}
+
+.steps-of-work__six-steps > p:before {
+    right: -20px;
+}
+
+.steps-of-work__six-steps > p:after {
+    left: -20px;
 }
 
 /* footer */
