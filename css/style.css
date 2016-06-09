@@ -1357,26 +1357,28 @@ footer a:hover{
 
 @media (max-width: 600px){
 
-    .header__logo, .header__phone{
-        text-align: center;
+    .header__title p{
+        border: 10px solid  #c8a150;
+        padding-left: 0;
     }
 
     .header__title:after{
         display: none;
     }
 
-    .header__title p{
-        border: 10px solid  #c8a150;
-        padding-left: 0;
+}
+
+@media (max-width: 767px){
+
+    .header__logo, .header__phone{
+        text-align: center;
     }
 
     .header__address p{
         text-align: center;
         margin-top: 15px;
     }
-}
 
-@media (max-width: 767px){
     .header__nav{
         display: none;
     }
@@ -1403,10 +1405,194 @@ footer a:hover{
 
     .advantages > div > div:nth-of-type(2) > div:last-child .advantages__example:after, .advantages > div > div:nth-of-type(1) > div:last-child .advantages__example:after{
         left: 0;
+        width: 100%;
     }
 
     .steps-of-work__six-steps{
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .how-we-do__plan{
+        display: block;
+        width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .how-we-do__plan:before{
+        content: "";
+        display: block;
+        width: 23px;
+        height: 51px;
+        background-image: url(../img/icon-arrow-down-gold.png);
+        position: absolute;
+        top: 0;
+        bottom: -280px;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+
+    .how-we-do__plan p{
+        /*position: static;*/
+        /*top: 0px;*/
+        right: 0;
+        margin: auto;
+    }
+
+    .how-we-do{
+        padding-bottom: 0;
+    }
+
+    .price-repair-apartaments__title:after{
+        right: -15px;
+    }
+
+    .price-repair-apartaments__title:before{
+        left: -15px;
+    }
+
+    .coffee-meet__title:before{
+        right: -13px;
+    }
+
+    .coffee-meet__title:after{
+        left: -13px;
+    }
+
+    .coffee-meet form{
+        margin: 0;
+    }
+
+    .coffee-meet form input[type=text]{
+        margin-bottom: 10px;
+    }
+
+    .advantages > div > div > div:first-child .advantages__example-title:after, .advantages > div > div > div:nth-child(2) .advantages__example-title:after, .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example-title:after, .advantages > div > div:nth-of-type(2) > div:last-child .advantages__example-title:after{
+        top: -80px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .advantages__example{
+        margin-bottom: 100px;
+    }
+
+    .advantages__example:last-child{
+        /*margin-bottom: 0;*/
+    }
+
+    .advantages__title:before{
+        right: -15px;
+    }
+
+    .advantages__title:after{
+        left: -15px;
+    }
+
+    .advantages > div > div:nth-of-type(1) > div:first-child .advantages__example:after, .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example:after{
+        left: 0;
+        width: 100%;
+    }
+
+    .steps-of-work__form{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .advantages__example-title:before{
+        width: 100%;
+    }
+
+    .steps-of-work__form{
+        border-radius: 0;
+    }
+
+    .steps-of-work__form p{
+        text-align: center;
+    }
+
+    .steps-of-work__form input[type=text]:last-child, .steps-of-work__form input[type=text]:first-child{
+        border-radius: 0;
+    }
+
+    .steps-of-work__form input[type=submit]{
+        margin-top: 0;
+    }
+
+    .steps-of-work__six-steps ul > li:first-child:after, .steps-of-work__six-steps ul > li:nth-child(2):after, .steps-of-work__six-steps ul > li:nth-child(3):after, .steps-of-work__six-steps ul > li:nth-child(4):after, .steps-of-work__six-steps ul > li:nth-child(5):after, .steps-of-work__six-steps ul > li:nth-child(6):after{
+        top: 0;
+    }
+
+    .steps-of-work__six-steps__conclusion:before, .steps-of-work__six-steps__conclusion:after{
+        width: 100%;
+    }
+
+    .owl-prev, .owl-next{
+        display: none;
+    }
+
+    .how-we-do__title::before, .how-we-do__title::after{
+        display: none;
+    }
+
+    header > div.container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .steps-of-work__six-steps ul{
+        padding-left: 0;
+    }
+
+    .pre-footer-form{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .wrapper{
+        padding-bottom: 380px;
+    }
+
+    .pre-footer-form > p:before{
+        right: 3px;
+    }
+
+    .pre-footer-form > p:after{
+        left: 3px;
+    }
+
+    .pre-footer-form__btn-skin{
+        margin-bottom: 20px;
+    }
+
+    .pre-footer-form input[type=text]:nth-child(2), .pre-footer-form input[type=text]:first-child{
+        margin-bottom: 20px;
+    }
+
+    .footer__phone, .footer__address, .footer__mail{
+        margin-bottom: 30px;
+    }
+
+    .footer__seosky-logo{
+        text-align: center;
+    }
+
+    .price-repair-apartaments__example-img-skin:after{
+        display: none;
+    }
+
+    .price-repair-apartaments__example{
+        margin-bottom: 50px;
+    }
+}
+
+
+@media (max-width: 440px){
+    .steps-of-work__form input[type=text]{
+        display: block;
+        width: 100%;
     }
 }
