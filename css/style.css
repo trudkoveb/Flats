@@ -147,6 +147,35 @@ input, select, textarea, button{
     padding-bottom: 115px;
 }
 
+h1{
+    font-family: HelveticaNeueBold;
+    font-size: 24px;
+    color: #c8a151;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 55px;
+    position: relative;
+    display: inline-block;
+}
+
+h1:after, h1:before{
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url(../img/icon-aside-nav-marker.png);
+    position: absolute;
+    top: 8px;
+}
+
+h1:after{
+    right: -30px;
+}
+
+h1:before{
+    left: -30px;
+}
+
 /* main page */
 
 header > div.container{
@@ -376,6 +405,7 @@ header > div.container{
     background-color: #343130;
     border: 2px solid #c5a14a;
     border-radius: 10px;
+    margin-top: 50px;
     -webkit-box-shadow: 0 0 10px 3px #5d4b2d;
     box-shadow: 0 0 10px 3px #5d4b2d;
     position: relative;
@@ -1595,4 +1625,308 @@ footer a:hover{
         display: block;
         width: 100%;
     }
+}
+
+
+/* 3 rooms page */
+
+.three-rooms-info{
+    text-align: center;
+    padding-bottom: 90px;
+}
+
+.three-rooms-info p{
+    font-family: HelveticaNeueMedium;
+    color: #000;
+    text-align: left;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+.three-rooms-repair-examples{
+    text-align: center;
+    padding: 50px 0;
+    background: -moz-linear-gradient(left,  #454845 20%,#2b2f2b 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #454845 20%,#2b2f2b 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to left,  #454845 20%,#2b2f2b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454845', endColorstr='#2b2f2b',GradientType=0 ); /* IE6-9 */
+    -webkit-box-shadow: 0 4px 4px 2px #9b9b9b;
+    box-shadow: 0 4px 4px 2px #9b9b9b;
+}
+
+.three-rooms-repaire-example{
+    display: inline-block;
+    width: 225px;
+    text-align: center;
+    margin-right: 55px;
+    margin-left: 55px;
+}
+
+/*.three-rooms-repaire-example:last-child{margin-right: 0;}*/
+
+.three-rooms-repaire-example:first-child{margin-left: 70px;}
+
+.three-rooms-repaire-examples__title{
+    font-family: HelveticaNeueBold;
+    color: #2d2c2c;
+    font-size: 16px;
+    background-color: #eacb7e;
+    border-radius: 8px;
+}
+
+.three-rooms-repaire-examples__img-skin{
+    position: relative;
+}
+
+.three-rooms-repaire-examples__img-skin:after{
+    content: "";
+    display: block;
+    width: 260px;
+    height: 180px;
+    background-image: url(../img/icon-price-repair-apartaments-border.png);
+    position: absolute;
+    top: -13px;
+    left: -17px;
+}
+
+.three-rooms-repaire-examples__price{
+    font-family: HelveticaNeueBold;
+    font-size: 18px;
+    color: #d4b473;
+    margin-top: 15px;
+}
+
+.three-rooms-repaire-examples__img-skin img{
+    width: 100%;
+}
+
+.types-of-work{
+    padding-top: 60px;
+}
+
+.types-of-work__title, .types-of-work__title-b{
+    font-family: HelveticaNeueMedium;
+    font-size: 24px;
+    color: #000;
+    position: relative;
+    text-align: center;
+}
+
+.types-of-work__title:after, .types-of-work__title:before, .types-of-work__title-b:after, .types-of-work__title-b:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-black-marker.png);
+    position: absolute;
+    top: 15px;
+}
+
+.types-of-work__title-b{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.types-of-work__title:after{
+    right: 480px;
+}
+
+.types-of-work__title:before{
+    left: 480px;
+}
+
+.types-of-work__title-b:after{
+    right: 275px;
+}
+
+.types-of-work__title-b:before{
+    left: 275px;
+}
+
+.types-of-work__list-a > p{
+    padding-bottom: 80px;
+}
+
+.types-of-work__list-a > p, .types-of-work ul li{
+    font-family: HelveticaNeueMedium;
+    font-size: 18px;
+    color: #000;
+}
+
+.types-of-work ul{
+    list-style: none;
+    position: relative;
+    padding-top: 30px;
+}
+
+.types-of-work .types-of-work__list-a ul{
+    padding-left: 200px;
+}
+
+.types-of-work .types-of-work__list-a ul:after{
+    content: "";
+    display: block;
+    width: 154px;
+    height: 154px;
+    background-image: url(../img/icon-right-angle.png);
+    top: 0;
+    right: 450px;
+    position: absolute;
+}
+
+.types-of-work .types-of-work__list-a ul:before{
+    content: "";
+    display: block;
+    width: 154px;
+    height: 154px;
+    background-image: url(../img/icon-left-angle.png);
+    bottom: 0;
+    left: 150px;
+    position: absolute;
+}
+
+.types-of-work .types-of-work__list-b ul:after{
+    content: "";
+    display: block;
+    width: 154px;
+    height: 154px;
+    background-image: url(../img/icon-top-left-angle.png);
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.types-of-work .types-of-work__list-b ul:before{
+    content: "";
+    display: block;
+    width: 154px;
+    height: 154px;
+    background-image: url(../img/icon-bottom-right-angle.png);
+    bottom: 0;
+    right: 150px;
+    position: absolute;
+}
+
+.types-of-work ul li{
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+
+.types-of-work ul li:after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-list-big-marker.png);
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+
+.three-rooms__advantages{
+    text-align: center;
+    padding: 50px 0;
+    background: -moz-linear-gradient(left, #454845 20%,#2b2f2b 100%);
+    background: -webkit-linear-gradient(left, #454845 20%,#2b2f2b 100%);
+    background: linear-gradient(to left, #454845 20%,#2b2f2b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#454845', endColorstr='#2b2f2b',GradientType=0 );
+    -webkit-box-shadow: 0 4px 4px 2px #9b9b9b;
+    box-shadow: 0 4px 4px 2px #9b9b9b;
+}
+
+.three-rooms__advantages-title{
+    color: #fff;
+    font-family: HelveticaNeueMedium;
+    font-size: 24px;
+    display: inline-block;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.three-rooms__advantages-title:after, .three-rooms__advantages-title:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-header-nav-delimiter.png);
+    position: absolute;
+    top: 17px;
+}
+
+.three-rooms__advantages-title:after{
+    right: -20px;
+}
+
+.three-rooms__advantages-title:before{
+    left: -20px;
+}
+
+.three-rooms__advantages ul{
+    list-style: none;
+    text-align: left;
+}
+
+.three-rooms__advantages ul li{
+    font-family: HelveticaNeueMedium;
+    font-size: 18px;
+    color: #000;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.three-rooms__advantages ul li:after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-list-big-marker.png);
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+
+.three-rooms__advantages ul + p{
+    font-size: 18px;
+    color: #fff;
+    font-family: HelveticaNeueMedium;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.three-rooms__advantages ul + p:after, .three-rooms__advantages ul + p:before{
+    content: "";
+    display: block;
+    width: 488px;
+    height: 2px;
+    background-image: url(../img/icon-straight-line.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.three-rooms__advantages ul + p:after{
+    top: -70px;
+}
+
+.three-rooms__advantages ul + p:before{
+    bottom: -80px;
+}
+
+.three-rooms__table{
+    padding-top: 65px;
+}
+
+.three-rooms__table-title{
+    font-family: HelveticaNeueLight;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
 }
