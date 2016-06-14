@@ -122,6 +122,12 @@
     src: url(../fonts/HelveticaNeueLightItalic.ttf); /* Путь к файлу со шрифтом */
 }
 
+@font-face {
+    font-family: HelveticaNeueItalic; /* Имя шрифта */
+    src: url(../fonts/HelveticaNeueItalic.ttf); /* Путь к файлу со шрифтом */
+}
+
+
 
 html{
     height: 100%;
@@ -151,7 +157,6 @@ h1{
     font-family: HelveticaNeueBold;
     font-size: 24px;
     color: #c8a151;
-    text-align: center;
     margin: 0;
     margin-bottom: 55px;
     position: relative;
@@ -161,19 +166,19 @@ h1{
 h1:after, h1:before{
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
-    background-image: url(../img/icon-aside-nav-marker.png);
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-little-yellow-dot.png);
     position: absolute;
-    top: 8px;
+    top: 12px;
 }
 
 h1:after{
-    right: -30px;
+    right: -20px;
 }
 
 h1:before{
-    left: -30px;
+    left: -20px;
 }
 
 /* main page */
@@ -1086,7 +1091,7 @@ header > div.container{
 .steps-of-work__six-steps-title{
     font-family: HelveticaNeueLight;
     font-size: 24px;
-    color: 000px;
+    color: #000;
     position: relative;
     display: inline-block;
 }
@@ -1101,12 +1106,8 @@ header > div.container{
     top: 14px;
 }
 
-.steps-of-work__six-steps-title:before {
-    right: -20px;
-}
-
-.steps-of-work__six-steps-title:after {
-    left: -20px;
+.steps-of-work__six-steps-title:before, .steps-of-work__six-steps-title:after{
+    display: none;
 }
 
 .steps-of-work__six-steps-title + p{
@@ -1332,6 +1333,7 @@ header > div.container{
 footer{
     background-color: #343333;
     padding: 30px 0;
+    text-align: center;
 }
 
 footer span, footer a{
@@ -1339,7 +1341,7 @@ footer span, footer a{
     font-size: 18px;
     color: #c8a150;
     position: relative;
-    display: block;
+    display: inline-block;
     padding: 15px 0;
     padding-left: 70px;
 }
@@ -1474,20 +1476,16 @@ footer a:hover{
         padding-bottom: 0;
     }
 
-    .price-repair-apartaments__title:after{
-        right: -15px;
+    .price-repair-apartaments__title:before, .price-repair-apartaments__title:after{
+        display: none;
     }
 
-    .price-repair-apartaments__title:before{
-        left: -15px;
+    .how-we-do__title + p{
+        width: 100%;
     }
 
-    .coffee-meet__title:before{
-        right: -13px;
-    }
-
-    .coffee-meet__title:after{
-        left: -13px;
+    .coffee-meet__title:before, .coffee-meet__title:after{
+        display: none;
     }
 
     .coffee-meet form{
@@ -1496,6 +1494,14 @@ footer a:hover{
 
     .coffee-meet form input[type=text]{
         margin-bottom: 10px;
+    }
+
+    .advantages{
+        padding-bottom: 0;
+    }
+
+    .advantages > div > div{
+        margin-bottom: 0;
     }
 
     .advantages > div > div > div:first-child .advantages__example-title:after, .advantages > div > div > div:nth-child(2) .advantages__example-title:after, .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example-title:after, .advantages > div > div:nth-of-type(2) > div:last-child .advantages__example-title:after{
@@ -1514,12 +1520,8 @@ footer a:hover{
         /*margin-bottom: 0;*/
     }
 
-    .advantages__title:before{
-        right: -15px;
-    }
-
-    .advantages__title:after{
-        left: -15px;
+    .advantages__title:before, .advantages__title:after{
+        display: none;
     }
 
     .advantages > div > div:nth-of-type(1) > div:first-child .advantages__example:after, .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example:after{
@@ -1557,7 +1559,7 @@ footer a:hover{
     }
 
     .steps-of-work__six-steps__conclusion:before, .steps-of-work__six-steps__conclusion:after{
-        width: 100%;
+        display: none;
     }
 
     .owl-prev, .owl-next{
@@ -1617,6 +1619,14 @@ footer a:hover{
     .price-repair-apartaments__example{
         margin-bottom: 50px;
     }
+
+    .portfolio-carousel__title:after, .portfolio-carousel__title:before{
+        display: none;
+    }
+
+    .footer__phone span:after{
+        left: -12px;
+    }
 }
 
 
@@ -1625,6 +1635,237 @@ footer a:hover{
         display: block;
         width: 100%;
     }
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .price-repair-apartaments__example-img-skin:after{
+        display: none;
+    }
+
+    .price-repair-apartaments__example-img-skin img{
+        width: 50%;
+    }
+
+    .coffee-meet form input[type=text]{
+        margin-bottom: 10px;
+    }
+
+    .advantages > div > div > div:first-child .advantages__example-title:after{
+        left: 180px;
+    }
+
+    .advantages > div > div > div:nth-child(2) .advantages__example-title:after{
+        left: 150px;
+    }
+
+    .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example-title:after{
+        left: 200px;
+    }
+
+    .advantages > div > div:nth-of-type(2) > div:last-child .advantages__example-title:after{
+        left: 180px;
+    }
+
+    .advantages__example:after{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: -160px;
+        margin: auto;
+    }
+
+    .advantages > div > div:nth-of-type(1) > div:first-child .advantages__example:after, .advantages > div > div:nth-of-type(1) > div:last-child .advantages__example:after, .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example:after, .advantages > div > div:nth-of-type(2) > div:last-child .advantages__example:after{
+        left: 0;
+    }
+
+    .advantages__example{
+        margin-bottom: 80px;
+    }
+
+    .advantages > div > div > div:nth-child(2) .advantages__example{
+        margin-bottom: 0;
+    }
+
+    .advantages > div > div > div:nth-child(2) .advantages__example:after{
+        bottom: -200px;
+    }
+
+    .steps-of-work__form{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .steps-of-work__form p{
+        text-align: center;
+    }
+
+    .steps-of-work__form:after{
+        left: 50px;
+    }
+
+    .steps-of-work__form:before{
+        right: 50px;
+    }
+
+    .steps-of-work__six-steps__conclusion:before{
+        bottom: -200px;
+    }
+
+    .steps-of-work__six-steps__conclusion:after{
+        top: -190px;
+    }
+
+    .wrapper{
+        padding-bottom: 335px;
+    }
+
+    .pre-footer-form input[type=text]{
+        margin-bottom: 30px;
+    }
+
+    .footer__phone, .footer__address, .footer__mail{
+        margin-bottom: 20px;
+    }
+
+    .footer__phone span:after{
+        left: -12px;
+    }
+
+    .steps-of-work__six-steps ul > li:first-child:after{
+        top: 4px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(2):after{
+        top: 1px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(3):after{
+        top: 3px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(4):after{
+        top: 5px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(5):after{
+        top: 4px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(6):after{
+        top: 0;
+    }
+
+    .header__phone{
+        margin-bottom: 20px;
+    }
+
+    h1{
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .header__title p{
+        padding-left: 25px;
+    }
+
+    .header__phone p{
+        font-size: 27px;
+    }
+
+    .how-we-do__plan{
+        margin-right: 43px;
+    }
+
+    .how-we-do__plan{
+        vertical-align: middle;
+    }
+
+    .how-we-do__plan:before{
+        right: -42px;
+    }
+
+    .plan-c:before{
+        right: -53px;
+    }
+
+    .plan-a:after, .plan-b:after, .plan-c:after, .plan-d:after, .plan-e:after{
+        top: -35px;
+    }
+
+    .price-repair-apartaments__example-img-skin:after{
+        left: -23px;
+    }
+
+    .price-repair-apartaments__example-img-skin img{
+        width: 100%;
+    }
+
+    .advantages > div > div > div:first-child .advantages__example-title:after{
+        left: 30px;
+    }
+
+    .advantages > div > div > div:nth-child(2) .advantages__example-title:after{
+        left: 80px;
+    }
+
+    .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example-title:after{
+        left: 50px;
+    }
+
+    .advantages > div > div:nth-of-type(2) > div:last-child .advantages__example-title:after{
+        left: 110px;
+    }
+
+    .advantages > div > div:nth-of-type(1) > div:first-child .advantages__example:after{
+        left: 25px;
+    }
+
+    .advantages > div > div:nth-of-type(1) > div:last-child .advantages__example:after, .advantages > div > div:nth-of-type(2) > div:last-child .advantages__example:after{
+        left: 115px;
+    }
+
+    .advantages > div > div:nth-of-type(2) > div:first-child .advantages__example:after{
+        left: 35px;
+    }
+
+    .price-repair-apartaments__example-info{
+        height: 146px;
+    }
+
+    .steps-of-work__form{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .steps-of-work__six-steps ul > li:first-child:after{
+        top: 4px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(2):after{
+        top: -2px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(3):after, .steps-of-work__six-steps ul > li:nth-child(4):after, .steps-of-work__six-steps ul > li:nth-child(5):after{
+        top: 2px;
+    }
+
+    .steps-of-work__six-steps ul > li:nth-child(6):after{
+        top: 1px;
+    }
+
+    .steps-of-work__six-steps__conclusion:after{
+        top: -140px;
+    }
+
+    .steps-of-work__six-steps__conclusion:before{
+        bottom: -140px;
+    }
+
+    footer span, footer a{
+        font-size: 15px;
+    }
+
 }
 
 
@@ -1702,6 +1943,7 @@ footer a:hover{
 
 .types-of-work{
     padding-top: 60px;
+    text-align: center;
 }
 
 .types-of-work__title, .types-of-work__title-b{
@@ -1710,6 +1952,11 @@ footer a:hover{
     color: #000;
     position: relative;
     text-align: center;
+    display: inline-block;
+}
+
+.types-of-work__title{
+    margin-bottom: 30px;
 }
 
 .types-of-work__title:after, .types-of-work__title:before, .types-of-work__title-b:after, .types-of-work__title-b:before{
@@ -1728,19 +1975,19 @@ footer a:hover{
 }
 
 .types-of-work__title:after{
-    right: 480px;
+    right: 160px;
 }
 
 .types-of-work__title:before{
-    left: 480px;
+    left: 160px;
 }
 
 .types-of-work__title-b:after{
-    right: 275px;
+    right: -20px;
 }
 
 .types-of-work__title-b:before{
-    left: 275px;
+    left: -20px;
 }
 
 .types-of-work__list-a > p{
@@ -1751,6 +1998,8 @@ footer a:hover{
     font-family: HelveticaNeueMedium;
     font-size: 18px;
     color: #000;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 .types-of-work ul{
@@ -1760,7 +2009,7 @@ footer a:hover{
 }
 
 .types-of-work .types-of-work__list-a ul{
-    padding-left: 200px;
+    margin-left: 200px;
 }
 
 .types-of-work .types-of-work__list-a ul:after{
@@ -1781,8 +2030,12 @@ footer a:hover{
     height: 154px;
     background-image: url(../img/icon-left-angle.png);
     bottom: 0;
-    left: 150px;
+    left: 0px;
     position: absolute;
+}
+
+.types-of-work__list-b{
+    margin-bottom: 40px;
 }
 
 .types-of-work .types-of-work__list-b ul:after{
@@ -1893,7 +2146,7 @@ footer a:hover{
     font-size: 18px;
     color: #fff;
     font-family: HelveticaNeueMedium;
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
     position: relative;
 }
@@ -1920,13 +2173,636 @@ footer a:hover{
     bottom: -80px;
 }
 
-.three-rooms__table{
+.three-rooms__price-table{
     padding-top: 65px;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
-.three-rooms__table-title{
+.three-rooms__price-table-title{
     font-family: HelveticaNeueLight;
     font-size: 24px;
     color: #000;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.three-rooms__price-table-title:after, .three-rooms__price-table-title:before{
+    content: "";
+    display: block;
+    background-image: url(../img/icon-black-marker.png);
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+}
+
+.three-rooms__price-table-title:after{
+    right: -20px;
+}
+
+.three-rooms__price-table-title:before{
+    left: -20px;
+}
+
+.three-rooms__price-table table{
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #9b836c;
+    font-family: HelveticaNeueMedium;
+}
+
+.three-rooms__price-table table table{
+    width: 100%;
+}
+
+.three-rooms__price-table > div > table > thead{
+    background-color: #414040;
+    font-family: HelveticaNeueBold;
+}
+
+.three-rooms__price-table > div > table > thead th{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.three-rooms__price-table > div > table > tbody table > thead th{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody td{
+    background-color: #373636;
+    padding: 5px 0;
+    display: table-cell;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody td:first-child{
+    text-align: left;
+    padding-left: 30px;
+    width: 60%;
+    border-left: none;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody td:last-child{
+    padding-right: 15px;
+    text-align: right;
+    width: 10%;
+    border-right: none;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody td:nth-child(2),.three-rooms__price-table > div > table > tbody table > tbody td:nth-child(4){
+    width: 5%;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody td:nth-child(3){
+    width: 20%;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody td{
+    border-left: 1px solid  #e0c8a1;
+    border-right: 1px solid  #e0c8a1;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody tr{
+    border-bottom: 1px solid  #e0c8a1;
+}
+
+.three-rooms__price-table > div > table > tbody table > tbody tr:last-child{
+    border-bottom: none;
+}
+
+.three-rooms__price-table table table:last-child td:last-child{
+    text-align: center;
+}
+
+@media (max-width: 767px){
+    .three-rooms__price-table > div > table > tbody table > tbody td{
+        display: block;
+    }
+
+    .three-rooms__price-table > div > table > tbody table > tbody td:first-child, .three-rooms__price-table > div > table > tbody table > tbody td:nth-child(2), .three-rooms__price-table > div > table > tbody table > tbody td:nth-child(3), .three-rooms__price-table > div > table > tbody table > tbody td:nth-child(4), .three-rooms__price-table > div > table > tbody table > tbody td:last-child{
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .types-of-work .types-of-work__list-a ul, .types-of-work .types-of-work__list-b ul{
+        margin-left: 20px;
+    }
+
+    .types-of-work__list-a > p, .types-of-work ul li{
+        padding-bottom: 10px;
+    }
+
+    .types-of-work .types-of-work__list-b ul:after, .types-of-work .types-of-work__list-b ul:before, .types-of-work .types-of-work__list-a ul:after, .types-of-work .types-of-work__list-a ul:before, .three-rooms__advantages ul + p:after, .three-rooms__advantages ul + p:before{
+        display: none;
+    }
+
+    .three-rooms__price-table > div > table > tbody table > tbody tr, .three-rooms__price-table > div > table > tbody table > tbody td{
+        border: none;
+    }
+
+    h1:after, h1:before{
+        display: none;
+    }
+
+    .three-rooms-repaire-example:first-child{
+        margin-left: 0;
+    }
+
+    .three-rooms-repaire-example{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .types-of-work__title:after, .types-of-work__title:before, .types-of-work__title-b:after, .types-of-work__title-b:before{
+        display: none;
+    }
+
+    .three-rooms__advantages-title:after, .three-rooms__advantages-title:before{
+        display: none;
+    }
+
+    .three-rooms__price-table-title:after, .three-rooms__price-table-title:before{
+        display: none;
+    }
+
+    h1{
+        margin-top: 20px;
+    }
+
+    .three-rooms__price-table table{
+        width: 100%;
+    }
+
+    .three-rooms-repaire-example{
+        display: block;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .three-rooms-repaire-examples__img-skin:after{
+        display: none;
+    }
+
+    .three-rooms-repaire-examples__img-skin img{
+        width: 60%;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .types-of-work .types-of-work__list-a ul:after{
+        right: 0;
+    }
+
+    .three-rooms__advantages ul + p:before{
+        bottom: -100px;
+    }
+
+    .three-rooms__advantages ul + p:after{
+        top: -90px;
+    }
+
+    .three-rooms__price-table table{
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+    .three-rooms-repaire-example:first-child{
+        margin-left: 0;
+    }
+
+    .three-rooms-repaire-example{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .types-of-work .types-of-work__list-a ul:after{
+        right: 290px;
+    }
+
+    .types-of-work .types-of-work__list-b ul:before{
+        bottom: -28px;
+    }
+
+    .three-rooms__price-table table{
+        width: 100%;
+    }
+}
+
+/* Capital repair */
+
+.capital-repair-info{
+    text-align: center;
+}
+
+.capital-repair-info-img img{
+    width: 100%;
+}
+
+.capital-repair-info-img figcaption{
+    background-color: #e9cd83;
+    font-family: HelveticaNeueBold;
+    color: #000;
+    font-size: 12px;
+    padding: 5px 11px;
+}
+
+.capital-repair-info-text p{
+    text-align: left;
+    font-family: HelveticaNeueMedium;
+    color: #000;
+    margin-bottom: 0;
+    line-height: 28px;
+}
+
+.capital-repair-info-img-adv{
+    background-color: #3b3a3a;
+    border: 5px solid  #c8a150;
+    margin-top: 10px;
+    padding: 5px 0;
+    -webkit-box-shadow: 0px 2px 5px 1px #6c6c6c;
+    box-shadow: 0px 2px 5px 1px #6c6c6c;
+}
+
+.capital-repair-info-img-adv p{
+    font-family: HelveticaNeueItalic;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.capital-repair-coop{
+    text-align: center;
+    padding-top: 50px;
+}
+
+.capital-repair-coop-title{
+    font-family: HelveticaNeueLight;
+    font-size: 24px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.capital-repair-coop-title:after, .capital-repair-coop-title:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-black-marker.png);
+    position: absolute;
+    top: 14px;
+}
+
+.capital-repair-coop-title:before{
+    right: -20px;
+}
+
+.capital-repair-coop-title:after{
+    left: -20px;
+}
+
+.capital-repair-coop-title ~ p{
+    text-align: left;
+    font-family: HelveticaNeueMedium;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 25px;
+    margin-right: 70px;
+    margin-left: 70px;
+}
+
+.capital-repair-coop ul{
+    text-align: left;
+    list-style: none;
+    position: relative;
+    margin-right: 110px;
+    margin-left: 110px;
+    padding: 40px;
+}
+
+.capital-repair-coop ul:before {
+    content: "";
+    display: block;
+    width: 154px;
+    height: 154px;
+    background-image: url(../img/icon-left-angle.png);
+    bottom: 0;
+    left: 0px;
+    position: absolute;
+}
+
+.capital-repair-coop ul:after {
+    content: "";
+    display: block;
+    width: 154px;
+    height: 154px;
+    background-image: url(../img/icon-right-angle.png);
+    top: 0;
+    right: 0px;
+    position: absolute;
+}
+
+.capital-repair-coop ul li{
+    font-family: HelveticaNeueMedium;
+    font-size: 18px;
+    color: #000;
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
+
+.capital-repair-coop ul li:after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-list-big-marker.png);
+    position: absolute;
+    top: 14px;
+    left: 0;
+}
+
+.capital-repair-type-of-work{
+    text-align: center;
+    background-color: #2f322f;
+    padding-top: 40px;
+    -webkit-box-shadow: 0 0 2px 4px #9b9b9b;
+    box-shadow: 0 0 2px 4px #9b9b9b;
+}
+
+.capital-repair-type-of-work-title{
+    font-family: HelveticaNeueLight;
+    font-size: 24px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.capital-repair-type-of-work-title:after, .capital-repair-type-of-work-title:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-white-marker.png);
+    position: absolute;
+    top: 14px;
+}
+
+.capital-repair-type-of-work-title:before{
+    right: -20px;
+}
+
+.capital-repair-type-of-work-title:after{
+    left: -20px;
+}
+
+.capital-repair-type-of-work-title ~ p, .capital-repair-type-of-work ul > li{
+    font-family: HelveticaNeueMedium;
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+}
+
+.capital-repair-type-of-work-title ~ p{
+    margin-left: 70px;
+    margin-right: 70px;
+    margin-bottom: 50px;
+}
+
+.capital-repair-type-of-work ul{
+    list-style: none;
+}
+
+.capital-repair-type-of-work ul > li{
+    position: relative;
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
+
+.capital-repair-type-of-work ul li:after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-list-big-marker.png);
+    position: absolute;
+    top: 5px;
+    left: -15px;
+}
+
+.capital-repair-type-of-work ul li:last-child:after{
+    top: 2px;
+}
+
+.capital-repair-advantages{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.capital-repair-advantages-title{
+    font-family: HelveticaNeueLight;
+    font-size: 24px;
+    color: #000;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.capital-repair-advantages-title:after, .capital-repair-advantages-title:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-image: url(../img/icon-black-marker.png);
+    position: absolute;
+    top: 14px;
+}
+
+.capital-repair-advantages-title:before{
+    right: -20px;
+}
+
+.capital-repair-advantages-title:after{
+    left: -20px;
+}
+
+.capital-repair-advantages ul{
+    list-style: none;
+    text-align: left;
+}
+
+.capital-repair-advantages ul > li{
+    font-family: HelveticaNeueMedium;
+    color: #000;
+    position: relative;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.capital-repair-advantages ul li:after{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/icon-list-big-marker.png);
+    position: absolute;
+    top: 0px;
+    left: -15px;
+}
+
+@media (max-width: 767px){
+    .capital-repair-coop-title:after, .capital-repair-coop-title:before, .capital-repair-type-of-work-title:after, .capital-repair-type-of-work-title:before, .capital-repair-advantages-title:after, .capital-repair-advantages-title:before{
+        display: none;
+    }
+
+    .capital-repair-type-of-work-title ~ p, .capital-repair-coop-title, .capital-repair-coop-title ~ p, .capital-repair-coop ul{
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .capital-repair-coop ul:before, .capital-repair-coop ul:after{
+        display: none;
+    }
+
+    .capital-repair-coop ul{
+        padding-right: 0;
+    }
+}
+
+/* Price page */
+
+.price-page__price-table{
+    text-align: center;
+}
+
+.price-page__price-table h1{
+    color: #fff;
+}
+
+.price-page__price-table h1:after, .price-page__price-table h1:before{
+    background-image: url(../img/icon-white-marker.png);
+}
+
+.price-page__price-table-link-block{
+    border: 2px solid  #454444;
+    background-color: #454444;
+}
+
+.price-page__price-table-link-skin{
+    background: -moz-linear-gradient(top,  #aa8539 35%,#6a4c21 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #aa8539 35%,#6a4c21 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #aa8539 35%,#6a4c21 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa8539', endColorstr='#6a4c21',GradientType=0 ); /* IE6-9 */
+    border-bottom: 1px solid  #454444;
+    cursor: pointer;
+    text-align: left;
+}
+
+.price-page__price-table-link-skin:hover a{
+    text-decoration: underline;
+}
+
+.price-page__price-table-link-block a{
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.price-page__price-table-link-block a:after{
+    content: "";
+    display: block;
+    width: 15px;
+    height: 9px;
+    background-image: url(../img/icon-price-page-arrow-down.png);
+    position: absolute;
+    top: 11px;
+    right: -10px;
+}
+
+.price-page__price-table-hidden > table{
+    color: #fff;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #c1975e;
+    font-family: HelveticaNeueMedium;
+}
+
+.price-page__price-table-hidden > table table{
+    width: 100%;
+}
+
+.price-page__price-table-hidden > table > thead{
+    background-color: #414040;
+    font-family: HelveticaNeueBold;
+}
+
+.price-page__price-table-hidden > table > thead th{
+    text-align: center;
+    padding: 5px 0;
+}
+
+.price-page__price-table-hidden > table > tbody table > thead th{
+    text-align: center;
+    padding: 10px 0;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody td{
+    background-color: #373636;
+    padding: 5px 0;
+    display: table-cell;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody td:first-child{
+    text-align: left;
+    padding-left: 30px;
+    width: 60%;
+    border-left: none;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody td:last-child{
+    padding-right: 15px;
+    text-align: right;
+    width: 10%;
+    border-right: none;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody td:nth-child(2),.price-page__price-table-hidden + table > tbody table > tbody td:nth-child(4){
+    width: 5%;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody td:nth-child(3){
+    width: 20%;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody td{
+    border-left: 1px solid  #e0c8a1;
+    border-right: 1px solid  #e0c8a1;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody tr{
+    border-bottom: 1px solid  #e0c8a1;
+}
+
+.price-page__price-table-hidden > table > tbody table > tbody tr:last-child{
+    border-bottom: none;
+}
+
+.price-page__price-table-hidden > table table:last-child td:last-child{
     text-align: center;
 }
